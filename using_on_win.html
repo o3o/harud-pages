@@ -12,9 +12,16 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
 
-      <title>Harud-pages by o3o</title>
+      <title>Using on Windows</title>
 </head>
 <body>
+   <header>
+      <div class="inner">
+         <h1>Harud-pages</h1>
+         <h2>Github pages for harud project</h2>
+         <a href="https://github.com/o3o/harud" class="button"><small>View project on</small> GitHub</a>
+      </div>
+   </header>
    <div id="content-wrapper">
       <div class="inner clearfix">
          <section id="main-content">
@@ -39,16 +46,17 @@
             <p>In your dub file you should add references at import libraries.</p>
             <p>For example:</p>
             <pre>
-            <code>{
-    &quot;name&quot;: &quot;hello&quot;,
-    &quot;description&quot;: &quot;Simple example with harud&quot;,
-   &quot;libs-posix&quot;: [&quot;hpdf&quot;],
-   &quot;sourcePaths&quot;: [&quot;.&quot;],
-   &quot;sourcePaths-windows&quot;: [&quot;../../lib/&quot;],
-   &quot;sourceFiles-windows&quot;: [&quot;../../lib/libhpdf.lib&quot;],
-    &quot;dependencies&quot;: {
-      &quot;harud&quot;: &quot;&gt;=0.1.0&quot;
-    }
+            <code>
+{
+  "name": "hello",
+  "description": "Simple example with harud",
+  "libs-posix": ["hpdf"],
+  "sourcePaths": ["."],
+  "sourcePaths-windows": ["../../lib/"],
+  "sourceFiles-windows": ["../../lib/libhpdf.lib"],
+  "dependencies": {
+      "harud": "&gt;=0.1.0"
+   }
 }
 </code>
             </pre>
@@ -61,7 +69,7 @@
 
       </div>
    </div>
-   </section>
+         </section>
 </body>
 
 
