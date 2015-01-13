@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<script src="../../highlight.pack.js"></script>
+<title>Page</title>
+<base href="../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>harud.<a href=harud/page.html>page</a>.</small><span class="highlight">Page</span>
+</div>
+<div class="toc">
+<ul><li><span class="package" onclick="show_hide('harud');"><a href="harud.html">harud</a></span>
+<ul id="harud" style='display:block;'>
+<li><small>harud.</small><a href="harud/annotation.html">annotation</a></li>
+<li><span class="package" onclick="show_hide('harud.c');"><small>harud.</small><a href="harud/c.html">c</a></span>
+<ul id="harud.c">
+<li><small>harud.c.</small><a href="harud/c/capi.html">capi</a></li>
+<li><small>harud.c.</small><a href="harud/c/consts.html">consts</a></li>
+<li><small>harud.c.</small><a href="harud/c/types.html">types</a></li>
+</ul>
+</li>
+<li><small>harud.</small><a href="harud/destination.html">destination</a></li>
+<li><small>harud.</small><a href="harud/doc.html">doc</a></li>
+<li><small>harud.</small><a href="harud/encoder.html">encoder</a></li>
+<li><small>harud.</small><a href="harud/error.html">error</a></li>
+<li><small>harud.</small><a href="harud/font.html">font</a></li>
+<li><small>harud.</small><a href="harud/haruobject.html">haruobject</a></li>
+<li><small>harud.</small><a href="harud/image.html">image</a></li>
+<li><small>harud.</small><a href="harud/outline.html">outline</a></li>
+<li><span class="selected"><small>harud.</small><a href="harud/page.html">page</a></span>
+</li>
+<li><small>harud.</small><a href="harud/version_.html">version_</a></li>
+</ul>
+</li>
+
+</ul>
+</div>
+<div class="content">
+<pre><code>public class Page : IHaruObject
+</code></pre>
+<div class="section "><p>The Page class
+</p>
+
+
+</div>
+<div class="section "><h2>Functions</h2><table><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.width.html">width</a><span class="extrainfo"></span></td><td></td><td><p>Gets the width of a page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.width.html">width</a><span class="extrainfo"></span></td><td></td><td><p>Changes the width of a page
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.height.html">height</a><span class="extrainfo"></span></td><td></td><td><p>Gets the height of a page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.height.html">height</a><span class="extrainfo"></span></td><td></td><td><p>Changes the height of a page
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setSize.html">setSize</a><span class="extrainfo"></span></td><td></td><td><p>Changes the size and direction of a page to a predefined size
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setRotate.html">setRotate</a><span class="extrainfo"></span></td><td></td><td><p>Sets rotation angle of the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.createDestination.html">createDestination</a><span class="extrainfo"></span></td><td></td><td><p>Creates a new Destination instance for the page
+</p>
+</td></tr><tr><td><a href="harud/page/Page.createTextAnnot.html">createTextAnnot</a><span class="extrainfo"></span></td><td></td><td><p>Creates a new Annotation instance for the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.createLinkAnnot.html">createLinkAnnot</a><span class="extrainfo"></span></td><td></td><td><p>Creates a new link Annotation instance object for the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.createURILinkAnnot.html">createURILinkAnnot</a><span class="extrainfo"></span></td><td></td><td><p>Creates a new web link Annotation instance object for the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.textWidth.html">textWidth</a><span class="extrainfo"></span></td><td></td><td><p>Gets the width of the text in current fontsize, character spacing and word spacing.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.measureText.html">measureText</a><span class="extrainfo"></span></td><td></td><td><p>Calculates the byte length which can be included within the specified width.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.graphicMode.html">graphicMode</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current graphics mode.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.currentPos.html">currentPos</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current position for path painting. 
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.currentTextPos.html">currentTextPos</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current position for text showing. 
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.currentFont.html">currentFont</a><span class="extrainfo"></span></td><td></td><td><p>Gets a Font instance of the page's current font.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.currentFontSize.html">currentFontSize</a><span class="extrainfo"></span></td><td></td><td><p>Gets the size of the page's current font.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.transMatrix.html">transMatrix</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current transformation matrix of the page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineCap.html">lineCap</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current line cap style of the page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineJoin.html">lineJoin</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current line join style of the page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineJoin.html">lineJoin</a><span class="extrainfo"></span></td><td></td><td><p>Sets the line join style in the page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.miterLimit.html">miterLimit</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's miter limit.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.dash.html">dash</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current pattern of the page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.flat.html">flat</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's flatness.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.charSpace.html">charSpace</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's character spacing.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.charSpace.html">charSpace</a><span class="extrainfo"></span></td><td></td><td><p>Sets the character spacing for text.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.wordSpace.html">wordSpace</a><span class="extrainfo"></span></td><td></td><td><p>Get the current value of the page's word spacing.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.wordSpace.html">wordSpace</a><span class="extrainfo"></span></td><td></td><td><p>Sets the word spacing for text.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.horizontalScalling.html">horizontalScalling</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's horizontal scalling for text showing.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.horizontalScalling.html">horizontalScalling</a><span class="extrainfo"></span></td><td></td><td><p>Sets the horizontal scalling (scaling) for text showing.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textLeading.html">textLeading</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's line spacing.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textLeading.html">textLeading</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text leading (line spacing) for text showing.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.getTextRenderingMode.html">getTextRenderingMode</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's text rendering mode.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setTextRenderingMode.html">setTextRenderingMode</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text rendering mode. The initial value of text rendering mode is HPDF_FILL.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textRise.html">textRise</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's text rising.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textRise.html">textRise</a><span class="extrainfo"></span></td><td></td><td><p>Moves the text position in vertical direction by the amount of value. Useful for making subscripts or superscripts.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getRGBFill.html">getRGBFill</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's filling color. 
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setRGBFill.html">setRGBFill</a><span class="extrainfo"></span></td><td></td><td><p>Sets the filling color.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getRGBStroke.html">getRGBStroke</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's stroking color. 
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setRGBStroke.html">setRGBStroke</a><span class="extrainfo"></span></td><td></td><td><p>Sets the stroking color.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getCMYKFill.html">getCMYKFill</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's filling color. 
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getCMYKStroke.html">getCMYKStroke</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's stroking color. 
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.grayFill.html">grayFill</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's filling color. 
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.grayFill.html">grayFill</a><span class="extrainfo"></span></td><td></td><td><p>Sets the filling color.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.grayStroke.html">grayStroke</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's stroking color. 
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.grayStroke.html">grayStroke</a><span class="extrainfo"></span></td><td></td><td><p>Sets the stroking color.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getStrokingColorSpace.html">getStrokingColorSpace</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's stroking color space.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getFillingColorSpace.html">getFillingColorSpace</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's stroking color space.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getTextMatrix.html">getTextMatrix</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current text transformation matrix of the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getGStateDepth.html">getGStateDepth</a><span class="extrainfo"></span></td><td></td><td><p>Gets the number of the page's graphics state stack.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setSlideShow.html">setSlideShow</a><span class="extrainfo"></span></td><td></td><td><p>Configures the setting for slide transition of the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.arc.html">arc</a><span class="extrainfo"></span></td><td></td><td><p>Appends a circle arc to the current path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.beginText.html">beginText</a><span class="extrainfo"></span></td><td></td><td><p>Begins a text object and sets the text position to (0, 0).
+</p>
+</td></tr><tr><td><a href="harud/page/Page.circle.html">circle</a><span class="extrainfo"></span></td><td></td><td><p>Appends a circle to the current path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.clip.html">clip</a><span class="extrainfo"></span></td><td></td><td><p>Modifies the current clipping path by intersecting it with the current path using the nonzero winding number rule. 
+</p>
+</td></tr><tr><td><a href="harud/page/Page.closePath.html">closePath</a><span class="extrainfo"></span></td><td></td><td><p>Appends a straight line from the current point to the start point of sub path. The current point is moved to the start point of sub path
+</p>
+</td></tr><tr><td><a href="harud/page/Page.closePathStroke.html">closePathStroke</a><span class="extrainfo"></span></td><td></td><td><p>Closes the current path. Then, it paints the path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.closePathFillStroke.html">closePathFillStroke</a><span class="extrainfo"></span></td><td></td><td><p>Closes the current path, fills the current path using the nonzero winding number rule, then paints the path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.concat.html">concat</a><span class="extrainfo"></span></td><td></td><td><p>Concatenates the page's current transformation matrix and specified matrix.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.curveTo.html">curveTo</a><span class="extrainfo"></span></td><td></td><td><p>Appends a Bézier curve to the current path using the control points (x1, y1) and (x2, y2) and (x3, y3), then sets the current point to (x3, y3).
+</p>
+</td></tr><tr><td><a href="harud/page/Page.curveTo2.html">curveTo2</a><span class="extrainfo"></span></td><td></td><td><p>Appends a Bézier curve to the current path using the current point and (x2, y2) and (x3, y3) as control points. Then, the current point is set to (x3, y3).
+</p>
+</td></tr><tr><td><a href="harud/page/Page.curveTo3.html">curveTo3</a><span class="extrainfo"></span></td><td></td><td><p>Appends a Bézier curve to the current path using two spesified points. The point (x1, y1) and the point (x3, y3) are used as the control points for a Bézier curve and current point is moved to the point (x3, y3)
+</p>
+</td></tr><tr><td><a href="harud/page/Page.drawImage.html">drawImage</a><span class="extrainfo"></span></td><td></td><td><p>Shows an image in one operation.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.ellipse.html">ellipse</a><span class="extrainfo"></span></td><td></td><td><p>Appends an ellipse to the current path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.endPath.html">endPath</a><span class="extrainfo"></span></td><td></td><td><p>Ends the path object without filling or painting.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.endText.html">endText</a><span class="extrainfo"></span></td><td></td><td><p>Ends a text object.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.eofill.html">eofill</a><span class="extrainfo"></span></td><td></td><td><p>Fills the current path using the even-odd rule.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.eofillStroke.html">eofillStroke</a><span class="extrainfo"></span></td><td></td><td><p>Fills the current path using the even-odd rule, then paints the path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.fill.html">fill</a><span class="extrainfo"></span></td><td></td><td><p>Fills the current path using the nonzero winding number rule.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.fillStroke.html">fillStroke</a><span class="extrainfo"></span></td><td></td><td><p>Fills the current path using the nonzero winding number rule, then paints the path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.gRestore.html">gRestore</a><span class="extrainfo"></span></td><td></td><td><p>Restore the graphics state which is saved by HPDF<em>Page</em>GSave().
+</p>
+</td></tr><tr><td><a href="harud/page/Page.gSave.html">gSave</a><span class="extrainfo"></span></td><td></td><td><p>Saves the page's current graphics parameter to the stack. An application can invoke gSave() up to 28 (???) and can restore the saved parameter by invoking gRestore().
+</p>
+</td></tr><tr><td><a href="harud/page/Page.lineTo.html">lineTo</a><span class="extrainfo"></span></td><td></td><td><p>Appends a path from the current point to the specified point.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.moveTextPos.html">moveTextPos</a><span class="extrainfo"></span></td><td></td><td><p>Changes the current text position, using the specified offset values. If the current text position is (x1, y1), the new text position will be (x1 + x, y1 + y).
+</p>
+</td></tr><tr><td><a href="harud/page/Page.moveTo.html">moveTo</a><span class="extrainfo"></span></td><td></td><td><p>Starts a new subpath and move the current point for drawing path, HPDF<em>Page</em>MoveTo() sets the start point for the path to the point (x, y).
+</p>
+</td></tr><tr><td><a href="harud/page/Page.moveToNextLine.html">moveToNextLine</a><span class="extrainfo"></span></td><td></td><td><p>Moves to the next line.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.rectangle.html">rectangle</a><span class="extrainfo"></span></td><td></td><td><p>Appends a rectangle to the current path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setCMYKFill.html">setCMYKFill</a><span class="extrainfo"></span></td><td></td><td><p>Sets the filling color.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setCMYKStroke.html">setCMYKStroke</a><span class="extrainfo"></span></td><td></td><td><p>Sets the stroking color.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setDash.html">setDash</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern for lines in the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setExtGState.html">setExtGState</a><span class="extrainfo"></span></td><td></td><td><p>Applyies the graphics state to the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setFontAndSize.html">setFontAndSize</a><span class="extrainfo"></span></td><td></td><td><p>Sets the type of font and size leading.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineWidth.html">lineWidth</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current line width of the page.
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineWidth.html">lineWidth</a><span class="extrainfo"></span></td><td></td><td><p>Sets the width of the line used to stroke a path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setLineCap.html">setLineCap</a><span class="extrainfo"></span></td><td></td><td><p>Sets the shape to be used at the ends of lines.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setMiterLimit.html">setMiterLimit</a><span class="extrainfo"></span></td><td></td><td><p>Sets the miter limit
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setTextMatrix.html">setTextMatrix</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text matrix
+</p>
+</td></tr><tr><td><a href="harud/page/Page.showTextNextLine.html">showTextNextLine</a><span class="extrainfo"></span></td><td></td><td><p>Moves the current text position to the start of the next line, 
+then prints the text at the current position on the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.stroke.html">stroke</a><span class="extrainfo"></span></td><td></td><td><p>Paints the current path.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.textOut.html">textOut</a><span class="extrainfo"></span></td><td></td><td><p>Prints the text on the specified position.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.textRect.html">textRect</a><span class="extrainfo"></span></td><td></td><td><p>Prints the text inside the specified region.
+</p>
+</td></tr></table>
+</div>
+
+<script>hljs.initHighlightingOnLoad();</script>
+</div>
+</div>
+</body>
+</html>

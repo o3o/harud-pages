@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<script src="../../highlight.pack.js"></script>
+<title>Doc</title>
+<base href="../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>harud.<a href=harud/doc.html>doc</a>.</small><span class="highlight">Doc</span>
+</div>
+<div class="toc">
+<ul><li><span class="package" onclick="show_hide('harud');"><a href="harud.html">harud</a></span>
+<ul id="harud" style='display:block;'>
+<li><small>harud.</small><a href="harud/annotation.html">annotation</a></li>
+<li><span class="package" onclick="show_hide('harud.c');"><small>harud.</small><a href="harud/c.html">c</a></span>
+<ul id="harud.c">
+<li><small>harud.c.</small><a href="harud/c/capi.html">capi</a></li>
+<li><small>harud.c.</small><a href="harud/c/consts.html">consts</a></li>
+<li><small>harud.c.</small><a href="harud/c/types.html">types</a></li>
+</ul>
+</li>
+<li><small>harud.</small><a href="harud/destination.html">destination</a></li>
+<li><span class="selected"><small>harud.</small><a href="harud/doc.html">doc</a></span>
+</li>
+<li><small>harud.</small><a href="harud/encoder.html">encoder</a></li>
+<li><small>harud.</small><a href="harud/error.html">error</a></li>
+<li><small>harud.</small><a href="harud/font.html">font</a></li>
+<li><small>harud.</small><a href="harud/haruobject.html">haruobject</a></li>
+<li><small>harud.</small><a href="harud/image.html">image</a></li>
+<li><small>harud.</small><a href="harud/outline.html">outline</a></li>
+<li><small>harud.</small><a href="harud/page.html">page</a></li>
+<li><small>harud.</small><a href="harud/version_.html">version_</a></li>
+</ul>
+</li>
+
+</ul>
+</div>
+<div class="content">
+<pre><code>public class Doc : IHaruObject
+</code></pre>
+<div class="section "><p>Document object class
+</p>
+
+
+</div>
+<div class="section "><h2>Functions</h2><table><tr><td><a href="harud/doc/Doc.this.html">this</a></td><td></td><td><p>Creates a new Doc instance
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.this.html">this</a></td><td></td><td><p>Creates a new Doc instance with a delegate which is invoked when an
+error occurred.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.saveToFile.html">saveToFile</a><span class="extrainfo"></span></td><td></td><td><p>Saves the document to a file.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.saveToStream.html">saveToStream</a><span class="extrainfo"></span></td><td></td><td><p>Saves the document to a temporary stream.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.getStreamSize.html">getStreamSize</a><span class="extrainfo"></span></td><td></td><td><p>Gets the size of the temporary stream of the document.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.readFromStream.html">readFromStream</a><span class="extrainfo"></span></td><td></td><td><p>Copies the data from the temporary stream of the document into a buffer.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.resetStream.html">resetStream</a><span class="extrainfo"></span></td><td></td><td><p>Rewinds the temporary stream of the document
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-static">static</span></span></span><a href="harud/doc/Doc.hasDoc.html">hasDoc</a><span class="extrainfo"></span></td><td></td><td><p>Checks if the document is valid
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setErrorHandler.html">setErrorHandler</a><span class="extrainfo"></span></td><td></td><td><p>Sets a user-defined error delegate. If a function call fails, the error delegate is called.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.getError.html">getError</a><span class="extrainfo"></span></td><td></td><td><p>Returns the last error code of specified document object
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.resetError.html">resetError</a><span class="extrainfo"></span></td><td></td><td><p>Once an error code is set, IO processing functions cannot be invoked. 
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setPagesConfiguration.html">setPagesConfiguration</a><span class="extrainfo"></span></td><td></td><td><p>In the default setting, a Doc object has one "Pages" object as root of pages. 
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/doc/Doc.pageLayout.html">pageLayout</a><span class="extrainfo"></span></td><td></td><td><p>Returns the current setting for page layout
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/doc/Doc.pageLayout.html">pageLayout</a><span class="extrainfo"></span></td><td></td><td><p>Sets how the page should be displayed. 
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/doc/Doc.pageMode.html">pageMode</a><span class="extrainfo"></span></td><td></td><td><p>Sets how the document should be displayed
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/doc/Doc.pageMode.html">pageMode</a><span class="extrainfo"></span></td><td></td><td><p>Returns the current setting for page mode
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setOpenAction.html">setOpenAction</a><span class="extrainfo"></span></td><td></td><td><p>Set the first page to appear when a document is opened.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.getCurrentPage.html">getCurrentPage</a><span class="extrainfo"></span></td><td></td><td><p>Returns the handle of current page object.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.addPage.html">addPage</a><span class="extrainfo"></span></td><td></td><td><p>Creates a new page and adds it after the last page of a document.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.insertPage.html">insertPage</a><span class="extrainfo"></span></td><td></td><td><p>Creates a new page and inserts it just before the specified page.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.getFont.html">getFont</a><span class="extrainfo"></span></td><td></td><td><p>Gets a Font instance of the requested font
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.getFont.html">getFont</a><span class="extrainfo"></span></td><td></td><td><p>Gets a Font instance of the requested font
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.loadType1FontFromFile.html">loadType1FontFromFile</a><span class="extrainfo"></span></td><td></td><td><p>Loads a Type1 font from an external file and registers it in the document object
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.loadTTFontFromFile.html">loadTTFontFromFile</a><span class="extrainfo"></span></td><td></td><td><p>Loads a TrueType font from an external file and register it to a document object
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.loadTTFontFromFile.html">loadTTFontFromFile</a><span class="extrainfo"></span></td><td></td><td><p>Loads a TrueType font from an external file (at the selected index) and register it to a document object
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.addPageLabel.html">addPageLabel</a><span class="extrainfo"></span></td><td></td><td><p>Adds a page labeling range for the document
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useJPFonts.html">useJPFonts</a><span class="extrainfo"></span></td><td></td><td><p>Enables Japanese fonts. After useJPFonts() is involed, an application can use the following Japanese fonts
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useKRFonts.html">useKRFonts</a><span class="extrainfo"></span></td><td></td><td><p>Enables Korean fonts. After useKRFonts() is involed, an application can use the following Korean fonts
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useCNSFonts.html">useCNSFonts</a><span class="extrainfo"></span></td><td></td><td><p>Enables simplified Chinese fonts. 
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useCNTFonts.html">useCNTFonts</a><span class="extrainfo"></span></td><td></td><td><p>Enables traditional Chinese fonts.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.getEncoder.html">getEncoder</a><span class="extrainfo"></span></td><td></td><td><p>Gets an instance of a Encoder object by specified encoding name
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/doc/Doc.currentEncoder.html">currentEncoder</a><span class="extrainfo"></span></td><td></td><td><p>Gets the handle of the current encoder of the document object. 
+The current encoder is set by invoking setCurrentEncoder() and it is used to processing a text when an application invokes setInfoAttr(). 
+The default value of it is null.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setCurrentEncoderByName.html">setCurrentEncoderByName</a><span class="extrainfo"></span></td><td></td><td><p>Sets the current encoder for the document
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useJPEncodings.html">useJPEncodings</a><span class="extrainfo"></span></td><td></td><td><p>Enables Japanese encodings. 
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useKREncodings.html">useKREncodings</a><span class="extrainfo"></span></td><td></td><td><p>Enables Korean encodings. 
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useCNSEncodings.html">useCNSEncodings</a><span class="extrainfo"></span></td><td></td><td><p>Enables simplified Chinese encodings. 
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.useCNTEncodings.html">useCNTEncodings</a><span class="extrainfo"></span></td><td></td><td><p>Enables traditional Chinese encodings.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.createOutline.html">createOutline</a><span class="extrainfo"></span></td><td></td><td><p>Creates an instance of HaruOutline object.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.loadPngImageFromFile.html">loadPngImageFromFile</a><span class="extrainfo"></span></td><td></td><td><p>Loads an external PNG image file. 
+If deferred is true. then does not load all the data immediately (only size and color properties are loaded). 
+The main data are loaded just before the image object is written to PDF, and the loaded data are deleted immediately.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.loadRawImageFromFile.html">loadRawImageFromFile</a><span class="extrainfo"></span></td><td></td><td><p>Loads an image which has "raw" image format. 
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.loadRawImageFromMem.html">loadRawImageFromMem</a><span class="extrainfo"></span></td><td></td><td><p>Loads an image which has "raw" image format from buffer. This function loads the data without any conversion. So it is usually faster than the other functions.
+The formats that loadRawImageFromMem() can load is the same as loadRawImageFromFile()
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.loadJpegImageFromFile.html">loadJpegImageFromFile</a><span class="extrainfo"></span></td><td></td><td><p>Loads an external JPEG image file
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setInfoAttr.html">setInfoAttr</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text of an info dictionary attribute, using current encoding of the document
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.getInfoAttr.html">getInfoAttr</a><span class="extrainfo"></span></td><td></td><td><p>Gets an attribute value from info dictionary.
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setInfoDateAttr.html">setInfoDateAttr</a><span class="extrainfo"></span></td><td></td><td><p>Sets a datetime attribute in the info dictionary.
+pdf = the handle of a document object.
+type = one of the following attributes:
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setPassword.html">setPassword</a><span class="extrainfo"></span></td><td></td><td><p>Sets a password for the document. If the password is set, document contents are encrypted
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/doc/Doc.permission.html">permission</a><span class="extrainfo"></span></td><td></td><td><p>Set the permission flags for the document
+</p>
+</td></tr><tr><td><a href="harud/doc/Doc.setEncryptionMode.html">setEncryptionMode</a><span class="extrainfo"></span></td><td></td><td><p>Set the encryption mode. As the side effect, ups the version of PDF to 1.4 when the mode is set to HaruEncryptMode.R3
+</p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/doc/Doc.compressionMode.html">compressionMode</a><span class="extrainfo"></span></td><td></td><td><p>Set the mode of compression.
+</p>
+</td></tr></table>
+</div>
+
+<script>hljs.initHighlightingOnLoad();</script>
+</div>
+</div>
+</body>
+</html>
