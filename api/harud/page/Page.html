@@ -89,13 +89,29 @@
 </p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineCap.html">lineCap</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current line cap style of the page.
 </p>
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineCap.html">lineCap</a><span class="extrainfo"></span></td><td></td><td><p>Sets the shape to be used at the ends of lines.
+</p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineJoin.html">lineJoin</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current line join style of the page.
 </p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineJoin.html">lineJoin</a><span class="extrainfo"></span></td><td></td><td><p>Sets the line join style in the page.
 </p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.miterLimit.html">miterLimit</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's miter limit.
 </p>
-</td></tr><tr><td><a href="harud/page/Page.dash.html">dash</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current pattern of the page.
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.miterLimit.html">miterLimit</a><span class="extrainfo"></span></td><td></td><td><p>Sets the miter limit
+</p>
+</td></tr><tr><td><a href="harud/page/Page.getDash.html">getDash</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current pattern of the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setDash.html">setDash</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern for lines in the page.
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setSolid.html">setSolid</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern to solid line
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setDotted.html">setDotted</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern to dotted line
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setDashDashDot.html">setDashDashDot</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern to dash-dash-dot line
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setDashDot.html">setDashDot</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern to dash-dot line
+</p>
+</td></tr><tr><td><a href="harud/page/Page.setDashed.html">setDashed</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern to dashed line
 </p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.flat.html">flat</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's flatness.
 </p>
@@ -115,9 +131,9 @@
 </p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textLeading.html">textLeading</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text leading (line spacing) for text showing.
 </p>
-</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.getTextRenderingMode.html">getTextRenderingMode</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's text rendering mode.
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textRenderingMode.html">textRenderingMode</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's text rendering mode.
 </p>
-</td></tr><tr><td><a href="harud/page/Page.setTextRenderingMode.html">setTextRenderingMode</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text rendering mode. The initial value of text rendering mode is HPDF_FILL.
+</td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textRenderingMode.html">textRenderingMode</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text rendering mode. The initial value of text rendering mode is HPDF_FILL.
 </p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.textRise.html">textRise</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current value of the page's text rising.
 </p>
@@ -173,7 +189,7 @@
 </p>
 </td></tr><tr><td><a href="harud/page/Page.curveTo2.html">curveTo2</a><span class="extrainfo"></span></td><td></td><td><p>Appends a Bézier curve to the current path using the current point and (x2, y2) and (x3, y3) as control points. Then, the current point is set to (x3, y3).
 </p>
-</td></tr><tr><td><a href="harud/page/Page.curveTo3.html">curveTo3</a><span class="extrainfo"></span></td><td></td><td><p>Appends a Bézier curve to the current path using two spesified points. The point (x1, y1) and the point (x3, y3) are used as the control points for a Bézier curve and current point is moved to the point (x3, y3)
+</td></tr><tr><td><a href="harud/page/Page.curveTo3.html">curveTo3</a><span class="extrainfo"></span></td><td></td><td><p>Appends a Bézier curve to the current path using two spesified points. 
 </p>
 </td></tr><tr><td><a href="harud/page/Page.drawImage.html">drawImage</a><span class="extrainfo"></span></td><td></td><td><p>Shows an image in one operation.
 </p>
@@ -199,7 +215,8 @@
 </p>
 </td></tr><tr><td><a href="harud/page/Page.moveTextPos.html">moveTextPos</a><span class="extrainfo"></span></td><td></td><td><p>Changes the current text position, using the specified offset values. If the current text position is (x1, y1), the new text position will be (x1 + x, y1 + y).
 </p>
-</td></tr><tr><td><a href="harud/page/Page.moveTo.html">moveTo</a><span class="extrainfo"></span></td><td></td><td><p>Starts a new subpath and move the current point for drawing path, HPDF<em>Page</em>MoveTo() sets the start point for the path to the point (x, y).
+</td></tr><tr><td><a href="harud/page/Page.moveTo.html">moveTo</a><span class="extrainfo"></span></td><td></td><td><p>Starts a new subpath and move the current point for drawing path, 
+moveTo() sets the start point for the path to the point (x, y).
 </p>
 </td></tr><tr><td><a href="harud/page/Page.moveToNextLine.html">moveToNextLine</a><span class="extrainfo"></span></td><td></td><td><p>Moves to the next line.
 </p>
@@ -209,8 +226,6 @@
 </p>
 </td></tr><tr><td><a href="harud/page/Page.setCMYKStroke.html">setCMYKStroke</a><span class="extrainfo"></span></td><td></td><td><p>Sets the stroking color.
 </p>
-</td></tr><tr><td><a href="harud/page/Page.setDash.html">setDash</a><span class="extrainfo"></span></td><td></td><td><p>Sets the dash pattern for lines in the page.
-</p>
 </td></tr><tr><td><a href="harud/page/Page.setExtGState.html">setExtGState</a><span class="extrainfo"></span></td><td></td><td><p>Applyies the graphics state to the page.
 </p>
 </td></tr><tr><td><a href="harud/page/Page.setFontAndSize.html">setFontAndSize</a><span class="extrainfo"></span></td><td></td><td><p>Sets the type of font and size leading.
@@ -218,10 +233,6 @@
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineWidth.html">lineWidth</a><span class="extrainfo"></span></td><td></td><td><p>Gets the current line width of the page.
 </p>
 </td></tr><tr><td><span class="extrainfo"><span class="attribs"><span class="attr-property">@property</span></span></span><a href="harud/page/Page.lineWidth.html">lineWidth</a><span class="extrainfo"></span></td><td></td><td><p>Sets the width of the line used to stroke a path.
-</p>
-</td></tr><tr><td><a href="harud/page/Page.setLineCap.html">setLineCap</a><span class="extrainfo"></span></td><td></td><td><p>Sets the shape to be used at the ends of lines.
-</p>
-</td></tr><tr><td><a href="harud/page/Page.setMiterLimit.html">setMiterLimit</a><span class="extrainfo"></span></td><td></td><td><p>Sets the miter limit
 </p>
 </td></tr><tr><td><a href="harud/page/Page.setTextMatrix.html">setTextMatrix</a><span class="extrainfo"></span></td><td></td><td><p>Sets the text matrix
 </p>

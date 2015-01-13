@@ -1,22 +1,45 @@
-<h1 id="using-on-windows">Using on Windows</h1>
-<p>In order to compile Windows projects with harud, you need:</p>
-<ul>
-<li>Dynamic library <code>libhpdf.dll</code><br /></li>
-<li>Import library <code>libhpdf.lib</code><br /></li>
-<li>D Binding <code>harud.lib</code></li>
-</ul>
-<h2 id="get-libhpdf.dll">Get libhpdf.dll</h2>
-<p>You can download a pre-compiled build for 2.3.0RC2 version<br /><a href="http://schrievkrom.wordpress.com/2012/01/25/libharu-windows-build-for-2-3-0rc2/">here</a>.</p>
-<h2 id="create-import-library">Create import library</h2>
-<p>The <a href="http://ftp.digitalmars.com/bup.zip">Basic Utilities Package</a> from Digital<br />Mars (<a href="http://digitalmars.com/download/freecompiler.html">http://digitalmars.com/download/freecompiler.html</a>) contains<br />the <code>implib</code> tool that creates import library from dll:</p>
-<pre><code>implib /s libhpdf.lib libhpdf.dll</code></pre>
-<h2 id="get-harud">Get harud</h2>
-<p>You can download harud from <a href="https://github.com/o3o/harud">here</a>.</p>
-<p>The directory <code>lib</code> contains all libraries</p>
-<h2 id="compiling-with-dub">Compiling with dub</h2>
-<p>In your dub file you should add references at import libraries.</p>
-<p>For example:</p>
-<pre><code>{
+<html>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+   <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+   <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+   <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+      <title>Harud-pages by o3o</title>
+</head>
+<body>
+   <div id="content-wrapper">
+      <div class="inner clearfix">
+         <section id="main-content">
+
+            <h3 id="using-on-windows">Using on Windows</h3>
+            <p>In order to compile Windows projects with harud, you need:</p>
+            <ul>
+               <li>Dynamic library <code>libhpdf.dll</code><br /></li>
+               <li>Import library <code>libhpdf.lib</code><br /></li>
+               <li>D Binding <code>harud.lib</code></li>
+            </ul>
+            <h4 id="get-libhpdf.dll">Get libhpdf.dll</h4>
+            <p>You can download a pre-compiled build for 2.3.0RC2 version<br /><a href="http://schrievkrom.wordpress.com/2012/01/25/libharu-windows-build-for-2-3-0rc2/">here</a>.</p>
+            <h4 id="create-import-library">Create import library</h4>
+            <p>The <a href="http://ftp.digitalmars.com/bup.zip">Basic Utilities Package</a> from Digital<br />Mars (<a href="http://digitalmars.com/download/freecompiler.html">http://digitalmars.com/download/freecompiler.html</a>) contains<br />the <code>implib</code> tool that creates import library from dll:</p>
+            <pre><code>implib /s libhpdf.lib libhpdf.dll</code></pre>
+
+            <h4 id="get-harud">Get harud</h4>
+            <p>You can download harud from <a href="https://github.com/o3o/harud">here</a>.</p>
+            <p>The directory <code>lib</code> contains all libraries</p>
+            <h2 id="compiling-with-dub">Compiling with dub</h2>
+            <p>In your dub file you should add references at import libraries.</p>
+            <p>For example:</p>
+            <pre>
+            <code>{
     &quot;name&quot;: &quot;hello&quot;,
     &quot;description&quot;: &quot;Simple example with harud&quot;,
    &quot;libs-posix&quot;: [&quot;hpdf&quot;],
@@ -26,8 +49,20 @@
     &quot;dependencies&quot;: {
       &quot;harud&quot;: &quot;&gt;=0.1.0&quot;
     }
-}</code></pre>
-<p><code>sourcePaths-windows</code> refers to directory that contains <code>libhpdf.lib</code> and <code>sourceFiles-windows</code> refers directly to <code>libhpdf.lib</code>.<br />Furthermore you should copy <code>libhpdf.dll</code> in same directory of executable.</p>
-<h2 id="compiling-with-make">Compiling with make</h2>
-<p>Pass the <code>libhpdf.lib</code> file to dmd when compiling your program:</p>
-<pre><code>dmd app.d ../harud/bin/harud.lib ../harud/lib/libhpdf.lib -I../harud/src  -ofbin/hello.exe</code></pre>
+}
+</code>
+            </pre>
+
+            <p><code>sourcePaths-windows</code> refers to directory that contains <code>libhpdf.lib</code> and <code>sourceFiles-windows</code> refers directly to <code>libhpdf.lib</code>.<br />Furthermore you should copy <code>libhpdf.dll</code> in same directory of executable.</p>
+
+            <h4 id="compiling-with-make">Compiling with make</h4>
+            <p>Pass the <code>libhpdf.lib</code> file to dmd when compiling your program:</p>
+            <pre><code>dmd app.d ../harud/bin/harud.lib ../harud/lib/libhpdf.lib -I../harud/src  -ofbin/hello.exe</code></pre>
+
+      </div>
+   </div>
+   </section>
+</body>
+
+
+</html>

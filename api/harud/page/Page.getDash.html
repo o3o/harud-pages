@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="../../style.css"/>
 <script src="../../highlight.pack.js"></script>
-<title>curveTo3</title>
+<title>getDash</title>
 <base href="../../"/>
 <script src="search.js"></script>
 <script src="show_hide.js"></script>
@@ -14,7 +14,7 @@
 <div class="breadcrumbs">
 <table id="results"></table>
 <a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
-<small>harud.<a href=harud/page.html>page</a>.</small><span class="highlight"><a href=harud/page/Page.html>Page</a>.curveTo3</span>
+<small>harud.<a href=harud/page.html>page</a>.</small><span class="highlight"><a href=harud/page/Page.html>Page</a>.getDash</span>
 </div>
 <div class="toc">
 <ul><li><span class="package" onclick="show_hide('harud');"><a href="harud.html">harud</a></span>
@@ -44,30 +44,15 @@
 </ul>
 </div>
 <div class="content">
-<pre><code>public <a href="harud/c/types/HPDF_STATUS.html">HPDF_STATUS</a> <a href="harud/page/Page.curveTo3.html">curveTo3</a>(
-    <a href="http://dlang.org/type.html#basic-data-types">float</a> x1, 
-    <a href="http://dlang.org/type.html#basic-data-types">float</a> y1, 
-    <a href="http://dlang.org/type.html#basic-data-types">float</a> x3, 
-    <a href="http://dlang.org/type.html#basic-data-types">float</a> y3)
+<pre><code>public DashMode <a href="harud/page/Page.getDash.html">getDash</a>()
 </code></pre>
-<div class="section "><p>Appends a Bézier curve to the current path using two spesified points. 
+<div class="section "><p>Gets the current pattern of the page.
 </p>
 
 
 </div>
-<div class="section"><p>The point (x1, y1) and the point (x3, y3) are used as the control points for a Bézier curve and current point is moved to the point (x3, y3)
-</p>
-
-
-</div>
-<div class="section"><h2>Parameters</h2>
-<table class="params">
-</table>
-</div>
-<div class="section"><p>, y1, x3, y3 = The control points for a Bézier curve.
-</p>
-<h2> Graphics Mode</h2>
-<p>Before and after - GMode.pathObject.
+<div class="section"><h2>Returns</h2>
+<p>when  succeeds, it returns a DashMode struct of the current pattern of the page.
 </p>
 
 

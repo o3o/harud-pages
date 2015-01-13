@@ -45,8 +45,7 @@
 </div>
 <div class="content">
 <pre><code>public <a href="harud/c/types/HPDF_STATUS.html">HPDF_STATUS</a> <a href="harud/page/Page.setDash.html">setDash</a>(
-    <a href="http://dlang.org/type.html#basic-data-types">ushort</a>* dash_ptn, 
-    <a href="http://dlang.org/type.html#basic-data-types">uint</a> num_param, 
+    <a href="http://dlang.org/type.html#basic-data-types">ushort</a>[] dashPattern, 
     <a href="http://dlang.org/type.html#basic-data-types">uint</a> phase)
 </code></pre>
 <div class="section "><p>Sets the dash pattern for lines in the page.
@@ -54,15 +53,26 @@
 
 
 </div>
+<div class="section "><h2>Contracts</h2><pre><code>in
+{
+    assert (dashPattern !is null);
+    assert (dashPattern.length < 9, "numElem should be lesser than 9");
+}
+</code></pre>
+
+</div>
+<div class="section"><h2> Graphics Mode</h2>
+<p>Before and after - GMode.pageDescription or GMode.textObject.
+</p>
+
+
+</div>
 <div class="section"><h2>Parameters</h2>
 <table class="params">
-<tr class="param"><td class="paramName">dash_pattern</td><td class="paramDoc"><p>Pattern of dashes and gaps used to stroke paths.
+<tr class="param"><td class="paramName">dashPattern</td><td class="paramDoc"><p>Pattern of dashes and gaps used to stroke paths. It's a repeating sequence of dash length, gap length, dash length etc, which are cycled through when stroking the line.
 </p>
 </td></tr>
-<tr class="param"><td class="paramName">num_elem</td><td class="paramDoc"><p>Number of elements in dash<em>pattern. 0 &lt;= num</em>param <= 8.
-</p>
-</td></tr>
-<tr class="param"><td class="paramName">phase</td><td class="paramDoc"><p>The phase in which the pattern begins (default is 0). Graphics Mode Before and after - GMode.PAGE<em>DESCRIPTION or GMode.TEXT</em>OBJECT.
+<tr class="param"><td class="paramName">phase</td><td class="paramDoc"><p>Initial offset in which the pattern begins (default is 0).
 </p>
 </td></tr>
 </table>
