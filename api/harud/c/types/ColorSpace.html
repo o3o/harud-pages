@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../../style.css"/>
+<script src="../../../highlight.pack.js"></script>
+<title>ColorSpace</title>
+<base href="../../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a class="home" href=index.html>⌂</a>
+<input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>harud.c.<a href=harud/c/types.html>types</a>.</small><span class="highlight">ColorSpace</span>
+</div>
+<div class="toc">
+<ul>
+<li><span class="package" onclick="show_hide('harud');"><a href="harud.html">harud</a></span>
+<ul id="harud" style='display:block;'>
+<li><small>harud.</small><a href="harud/annotation.html">annotation</a></li>
+<li><span class="package" onclick="show_hide('harud.c');"><small>harud.</small><a href="harud/c.html">c</a></span>
+<ul id="harud.c" style='display:block;'>
+<li><small>harud.c.</small><a href="harud/c/capi.html">capi</a></li>
+<li><small>harud.c.</small><a href="harud/c/consts.html">consts</a></li>
+<li><span class="selected"><small>harud.c.</small><a href="harud/c/types.html">types</a></span>
+</li>
+</ul>
+</li>
+<li><small>harud.</small><a href="harud/destination.html">destination</a></li>
+<li><small>harud.</small><a href="harud/doc.html">doc</a></li>
+<li><small>harud.</small><a href="harud/encoder.html">encoder</a></li>
+<li><small>harud.</small><a href="harud/error.html">error</a></li>
+<li><small>harud.</small><a href="harud/font.html">font</a></li>
+<li><small>harud.</small><a href="harud/haruobject.html">haruobject</a></li>
+<li><small>harud.</small><a href="harud/image.html">image</a></li>
+<li><small>harud.</small><a href="harud/outline.html">outline</a></li>
+<li><small>harud.</small><a href="harud/page.html">page</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="content">
+<pre><code>public enum ColorSpace
+</code></pre>
+<div class="section "><p>The color space of the image.
+</p>
+
+
+</div>
+<div class="section "><h2>Values</h2><table><tr><td>deviceGray</td><td></td><td>8 bit gray scale image.<br/>
+     The gray scale describes each pixel with one byte. <br/>
+     For each byte, 0X00 is maximum dark, 0XFF maximum light. The size of the
+     image data is (width * height) bytes.<br/>
+     The sequence of bytes for an 8-pixel 8-bit image with 2 rows and 4 columns would be:
+     <pre><code>     1   2   3   4
+     5   6   7   8
+    </code></pre></td></tr><tr><td>deviceRGB</td><td></td><td>The RGB color model is an additive color model in which red, green, and
+     blue light are added together in various ways to reproduce a broad array
+     of colors. <br/>
+     The 24 bit RGB color image describes each pixel with three bytes (Red,
+     Green, Blue). <br/>
+     For each byte, 0X00 is maximum dark, 0XFF maximum light. The size of the image data is (width * height * 3) bytes.
+     The sequence of bytes for an 8-pixel 24-bit image with 2 rows and 4 columns would be:
+     <pre><code>     1R 1G 1B  2R 2G 2B  3R 3G 3B  4R 4G 4B  
+     5R 5G 5B  6R 6G 6B  7R 7G 7B  8R 8G 8B  
+    </code></pre></td></tr><tr><td>deviceCMYK</td><td></td><td>The CMYK color model (process color, four color) is a subtractive color
+     model, used in color printing, and is also used to describe the printing
+     process itself. <br/>
+     The 32 bit CMYK color image describes each pixel with four bytes (Cyan,
+     Magenta, Yellow, Black). <br/>
+     The size of the image data is (width * height * 4) bytes. For each byte,
+     0X00 is maximum dark, 0XFF maximum light.<br/>
+     The sequence of bytes for an 8-pixel 32-bit image with 2 rows and 4 columns would be:
+     <pre><code>     1C 1M 1Y 1K  2C 2M 2Y 2K  3C 3M 3Y 3K  4C 4M 4Y 4K
+     5C 5M 5Y 5K  6C 6M 6Y 6K  7C 7M 7Y 7K  8C 8M 8Y 8K
+    </code></pre>  </td></tr></table>
+</div>
+
+<script>hljs.initHighlightingOnLoad();</script>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../../style.css"/>
+<script src="../../highlight.pack.js"></script>
+<title>setColorMask</title>
+<base href="../../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a class="home" href=index.html>⌂</a>
+<input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small>harud.<a href=harud/image.html>image</a>.</small><span class="highlight"><a href=harud/image/Image.html>Image</a>.setColorMask</span>
+</div>
+<div class="toc">
+<ul>
+<li><span class="package" onclick="show_hide('harud');"><a href="harud.html">harud</a></span>
+<ul id="harud" style='display:block;'>
+<li><small>harud.</small><a href="harud/annotation.html">annotation</a></li>
+<li><span class="package" onclick="show_hide('harud.c');"><small>harud.</small><a href="harud/c.html">c</a></span>
+<ul id="harud.c">
+<li><small>harud.c.</small><a href="harud/c/capi.html">capi</a></li>
+<li><small>harud.c.</small><a href="harud/c/consts.html">consts</a></li>
+</ul>
+</li>
+<li><small>harud.</small><a href="harud/destination.html">destination</a></li>
+<li><small>harud.</small><a href="harud/doc.html">doc</a></li>
+<li><small>harud.</small><a href="harud/encoder.html">encoder</a></li>
+<li><small>harud.</small><a href="harud/error.html">error</a></li>
+<li><small>harud.</small><a href="harud/font.html">font</a></li>
+<li><small>harud.</small><a href="harud/haruobject.html">haruobject</a></li>
+<li><span class="selected"><small>harud.</small><a href="harud/image.html">image</a></span>
+</li>
+<li><small>harud.</small><a href="harud/outline.html">outline</a></li>
+<li><small>harud.</small><a href="harud/page.html">page</a></li>
+<li><small>harud.</small><a href="harud/types.html">types</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="content">
+<pre><code>public HPDF_STATUS setColorMask(
+    uint rmin, 
+    uint rmax, 
+    uint gmin, 
+    uint gmax, 
+    uint bmin, 
+    uint bmax)
+</code></pre>
+<div class="section "><p>Sets the transparent color of the image by the RGB range values. 
+</p>
+
+
+</div>
+<div class="section "><h2>Contracts</h2><pre><code>in
+{
+    assert (rmin < 256, "rmin should less than 256");
+    assert (rmax < 256, "rmax should less than 256");
+    assert (gmin < 256, "gmin should less than 256");
+    assert (gmax < 256, "gmax should less than 256");
+    assert (bmin < 256, "bmin should less than 256");
+    assert (bmax < 256, "bmax should less than 256");
+}
+</code></pre>
+
+</div>
+<div class="section"><p>The color within the range is displayed as a transparent color. The Image must be RGB color space.
+</p>
+
+
+</div>
+<div class="section"><h2>Parameters</h2>
+<table class="params">
+<tr class="param"><td class="paramName">rmin</td><td class="paramDoc"><p>The lower limit of Red. It must be between 0 and 255.
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">rmax</td><td class="paramDoc"><p>The upper limit of Red. It must be between 0 and 255.
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">gmin</td><td class="paramDoc"><p>The lower limit of Green. It must be between 0 and 255.
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">gmax</td><td class="paramDoc"><p>The upper limit of Green. It must be between 0 and 255.
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">bmin</td><td class="paramDoc"><p>The lower limit of Blue. It must be between 0 and 255.
+</p>
+</td></tr>
+<tr class="param"><td class="paramName">bmax</td><td class="paramDoc"><p>The upper limit of Blue. It must be between 0 and 255.
+</p>
+</td></tr>
+</table>
+</div>
+
+<script>hljs.initHighlightingOnLoad();</script>
+</div>
+</div>
+</body>
+</html>
